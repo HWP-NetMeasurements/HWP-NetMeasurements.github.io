@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout source
       uses: actions/checkout@v4
       with:
         ref: source
@@ -23,6 +23,10 @@ jobs:
         gem install bundler
         bundle install
         bundle exec jekyll build
+    - name: Checkout master
+      uses: actions/checkout@v4
+      with:
+        ref: master
     - name: Deploy
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -30,7 +34,6 @@ jobs:
         set -xo pipefail
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git checkout master
         ls -Q | grep -v _site | xargs rm -rf
         mv _site/* .
         rm -rf _site
