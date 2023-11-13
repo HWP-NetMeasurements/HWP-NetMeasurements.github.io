@@ -13,9 +13,8 @@ jobs:
       with:
         ref: source
     - name: Set up Ruby 3.2
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1
+      uses: actions/checkout@v4
+      uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
     - name: Build Jekyll site
