@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: source
-    - name: Set up Ruby 3.2
+    - name: Set up Ruby 2.6 # Does not work with Ruby 3.2 (jekyll scholar uses exists)
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.6'
@@ -23,7 +23,6 @@ jobs:
         gem install bundler
         bundle install
         bundle exec jekyll build
-        cp CNAME _site/CNAME
     - name: Deploy
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
