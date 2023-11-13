@@ -6,6 +6,7 @@ on:
     - source
 
 jobs:
+runs-on: ubuntu-latest
   build:
     runs-on: ubuntu-latest
     steps:
@@ -14,9 +15,10 @@ jobs:
       with:
         ref: source
     - name: Set up Ruby 3.2
-      uses: actions/setup-ruby@v1
+      uses: actions/checkout@v4
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.2
+        ruby-version: '3.2'
     - name: Build Jekyll site
       run: |
         set -xo pipefail
