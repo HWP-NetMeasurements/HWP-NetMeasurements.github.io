@@ -43,12 +43,12 @@
 
 
       {% if entry.type == "article" %}
-        {{ entry.journal }} {{ entry.year }}
+        <i>{{ entry.journal }}</i> {{ entry.year }}
 
       {% elsif entry.type == "inbook" %}
 
       {% elsif entry.type == "inproceedings" %}
-        {{ entry.booktitle }} {{ entry.year }}
+      <i>{{ entry.booktitle }}</i> {{ entry.year }}
 
       {% elsif entry.key contains "PATENT" %}
 
@@ -61,12 +61,12 @@
       {% elsif entry.type contains "techrep" %}
         <b>{{ entry.year }}</b>
       {% endif %} 
-
-      <div style="overflow-wrap: break-word; inline-size: 100%;">
+      
+      <div>
 
         <details name="det" style="display: inline-block; ">
           <summary><i class="fa fa-book" aria-hidden="true"></i>  Bibtex</summary>
-          <div class="content" ><p style="font-size: 1.1em"><pre style="display: inline-block;">{{entry.bibtex}}</pre></p></div>
+          <div class="content" ><p style="font-size: 1.1em"><pre>{{entry.bibtex}}</pre></p></div>
         </details> 
         {% if entry.abstract %}
 
