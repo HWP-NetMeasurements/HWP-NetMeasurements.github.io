@@ -40,4 +40,10 @@ var store = [{
         "tags": [],
         "url": "/2023/10/18/Conext.html",
         "teaser": null
+      },{
+        "title": "DUMBO accepted at Conext 2024",
+        "excerpt":"Our paper titled “Taming the Elephants: Affordable Flow Length Prediction in the Data Plane” will be presented at Conext 2024 Congrats to the team, especially Raphael, Andrea, and Gabriele. Abstract: Machine Learning (ML) shows promising potential for enhancing networking tasks. In particular, early flow size prediction would be beneficial for...","categories": [],
+        "tags": [],
+        "url": "/2024/01/15/Conext.html",
+        "teaser": null
       }]
