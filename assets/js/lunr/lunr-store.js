@@ -46,4 +46,10 @@ var store = [{
         "tags": [],
         "url": "/2024/01/15/Conext.html",
         "teaser": null
+      },{
+        "title": "Wang Chao's MITUNE paper accepted at ICLR 2025",
+        "excerpt":"Wang Chao’s paper titled “Information Theoretic Text-to-Image Alignment” will be presented at Conext 2024 Congrats to Chao and the team. Abstract: Diffusion models for Text-to-Image (T2I) conditional generation have recently achieved tremendous success. Yet, aligning these models with user’s intentions still involves a laborious trial-and-error process, and this challenging alignment...","categories": [],
+        "tags": [],
+        "url": "/2025/01/27/ICLR.html",
+        "teaser": null
       }]
